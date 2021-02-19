@@ -1,0 +1,21 @@
+name: "my-website"
+navbar:
+  title: Econometría I
+  left: 
+    - text: Tutoriales de R
+      menu: 
+        - text: Instalación de R
+          href: tutoriales/installR.html
+        - text: R Markdown
+          href: tutorial2.html
+    - text: Guías de Ejercicios
+      menu: 
+        - text: Guía 1
+          href: guia1.html
+        - text: Guía 2
+          href: guia2.html
+output: 
+  html_document:
+    theme: flatly
+    
+  

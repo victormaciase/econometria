@@ -1,0 +1,6 @@
+---
+title: "Econometría"
+---
+
+Introduction to Econometrics with R [link](https://www.econometrics-with-r.org/)
+
