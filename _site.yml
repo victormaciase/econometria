@@ -10,6 +10,8 @@ navbar:
           href: tutoriales/installR.html
         - text: R Markdown
           href: tutoriales/IntroRMarkdown.html
+        - text: Importar datos a R
+          href: tutoriales/ImportarR.html
     - text: Guías de Ejercicios
       menu: 
         - text: Guía 1
