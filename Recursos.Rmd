@@ -1,0 +1,11 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+<br>
+Hanck, C., Arnold, M., Gerber, A. and M. Schmelzer. 2018. Introduction to Econometrics with R [link](https://www.econometrics-with-r.org/)

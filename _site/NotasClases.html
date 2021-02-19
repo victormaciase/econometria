@@ -11,7 +11,7 @@
 
 
 
-<title>Econometría I</title>
+<title>Slides</title>
 
 <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -20,6 +20,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -260,6 +263,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -267,6 +333,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -331,33 +407,26 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Econometría I</h1>
+<h1 class="title toc-ignore">Slides</h1>
 
 </div>
 
 
-<p class="p2">
-El objetivo principal de este curso consiste en introducir al alumno a los fundamentos teóricos y prácticos de las técnicas econométricas básicas. Al final del curso el alumno debiera ser capaz de modelar y estimar relaciones entre distintas variables económicas de interés. Asimismo, el alumno estará en condiciones de interpretar resultados econométricos, criticarlos y proponer soluciones a los problemas clásicos que se enfrenta el investigador al momento de hacer econometría.
-</p>
-<h2>
-Profesor: Víctor Macías E.
-</h2>
-<p>e-mail: <a href="mailto:victor.macias@mail.udp.cl" class="email">victor.macias@mail.udp.cl</a></p>
-<h2>
-Programa del curso
-</h2>
-<div>
-<p>El objetivo de este curso</p>
+<div id="revisión-de-conceptos-estadísticos" class="section level3">
+<h3>Revisión de conceptos estadísticos</h3>
+<p>fdsfsg dffggr rtet</p>
 </div>
-<h2>
-Evaluaciones
-</h2>
-<p>
-Se realizarán tres evaluaciones cuyo promedio tiene una ponderación de 50% de la nota final y otras dos evaluaciones comunes entre las distintas secciones del curso de 25% cada una.
-</p>
+<div id="fsefw" class="section level3">
+<h3>fsefw</h3>
+</div>
+<div id="frrfgeg" class="section level3">
+<h3>frrfgeg</h3>
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -390,6 +459,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

@@ -1,0 +1,20 @@
+<style>
+
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px blue;
+  padding: 50px;
+  margin: 20px;
+}
+
+p   {color: gray;}
+
+p.groove {border-style: groove;}
+
+.p2 {
+  font-family: Helvetica, sans-serif;
+}
+
+
+</style>

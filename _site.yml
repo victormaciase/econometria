@@ -1,7 +1,9 @@
 name: "my-website"
 navbar:
-  title: Econometría I
-  left: 
+  title: ICO8106
+  left:
+    - text: Notas de Clases
+      href: NotasClases.html
     - text: Tutoriales de R
       menu: 
         - text: Instalación de R
@@ -14,8 +16,14 @@ navbar:
           href: guia1.html
         - text: Guía 2
           href: guia2.html
+    - text: Recursos
+      href: Recursos.html
 output: 
   html_document:
     theme: flatly
+    highlight: textmate
+    css: styles.css
+    
+
     
   
