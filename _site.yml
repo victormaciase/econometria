@@ -9,7 +9,7 @@ navbar:
         - text: Instalación de R
           href: tutoriales/installR.html
         - text: R Markdown
-          href: tutorial2.html
+          href: tutoriales/IntroRMarkdown.html
     - text: Guías de Ejercicios
       menu: 
         - text: Guía 1

@@ -1,21 +1,19 @@
 ---
 title: "Econometría I"
 ---
-
-<p class="p2">
+<br>
+<p>
+Profesor: Víctor Macías E.
+<br>
+E-mail: victor.macias@mail.udp.cl
+</p>
+<br>
+<br>
+<p>
 El objetivo principal de este curso consiste en introducir al alumno a los fundamentos teóricos y prácticos de las técnicas econométricas básicas. Al final del curso el alumno debiera ser capaz de modelar y estimar relaciones entre distintas variables económicas de interés. Asimismo, el alumno estará en condiciones de interpretar resultados econométricos, criticarlos y proponer soluciones a los problemas clásicos que se enfrenta el investigador al momento de hacer econometría.
 </p>
 
-<h2>Profesor: Víctor Macías E.</h2>
-e-mail: victor.macias@mail.udp.cl
-
-
 <h2>Programa del curso</h2>
-
-<div> 
-El objetivo de este curso
-</div>
-
 
 <h2>Evaluaciones</h2>
 

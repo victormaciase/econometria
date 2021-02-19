@@ -8,12 +8,15 @@ div {
   margin: 20px;
 }
 
-p   {color: gray;}
+p {
+  color: gray;
+  font-family: Helvetica, sans-serif;
+}
 
 p.groove {border-style: groove;}
 
 .p2 {
-  font-family: Helvetica, sans-serif;
+  
 }
 
 
