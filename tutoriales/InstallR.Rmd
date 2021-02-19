@@ -31,13 +31,13 @@ Ir a la siguiente página: <http://www.rstudio.com> y seguir las instrucciones, 
 
 Abre RStudio y comienza a trabajar en R!
 
-RStudioPanes.jpg
+![](RStudioPanes.jpg)
 
 # RStudio Cloud
 
 Otra forma de trabajar con R es usar RStudio Cloud que es la versión en la nube de RStudio. Para comenzar a trabajar de esta forma, se debe crear una cuenta en <https://rstudio.cloud/> y luego generar un nuevo proyecto.
 
-rstudio_cloud.png
+![](rstudio_cloud.png)
 
 
 # Instalación de paquetes

@@ -31,13 +31,13 @@ Ir a la siguiente página: <http://www.rstudio.com> y seguir las instrucciones, 
 
 Abre RStudio y comienza a trabajar en R!
 
-RStudioPanes.jpg
+![](RStudioPanes.jpg)
 
 # RStudio Cloud
 
 Otra forma de trabajar con R es usar RStudio Cloud que es la versión en la nube de RStudio. Para comenzar a trabajar de esta forma, se debe crear una cuenta en <https://rstudio.cloud/> y luego generar un nuevo proyecto.
 
-rstudio_cloud.png
+![](rstudio_cloud.png)
 
 
 # Instalación de paquetes
@@ -69,7 +69,7 @@ Los principales repositorios de paquetes son:
 
 Para ver una lista de paquetes disponibles por tópico en CRAN se recomienda revisar: <https://cran.r-project.org/web/views/>
 
-# Chequar versión de R
+# Chequear versión de R
 
 Para chequear la versión de R instalada en tu computador, escribe en la consola:
 
