@@ -69,7 +69,7 @@ Los principales repositorios de paquetes son:
 
 Para ver una lista de paquetes disponibles por tópico en CRAN se recomienda revisar: <https://cran.r-project.org/web/views/>
 
-# Chequar versión de R
+# Chequear versión de R
 
 Para chequear la versión de R instalada en tu computador, escribe en la consola:
 
