@@ -11,4 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 Mastering Econometrics [link](https://mru.org/courses/mastering-econometrics/path-cause-effect)
 <br>
 <br>
-Hanck, C., Arnold, M., Gerber, A. and M. Schmelzer. 2018. Introduction to Econometrics with R [link](https://www.econometrics-with-r.org/)
+Çetinkaya-Rundel, M. y J. Hardin. Introduction to Modern Statistics [link](https://openintro-ims.netlify.app/index.html)
+<br>
+<br>
+Hanck, C., Arnold, M., Gerber, A. y M. Schmelzer. 2018. Introduction to Econometrics with R [link](https://www.econometrics-with-r.org/)
+

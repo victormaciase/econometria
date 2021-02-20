@@ -8,7 +8,10 @@ Profesor: Víctor Macías E.
 E-mail: victor.macias@mail.udp.cl
 </p>
 <br>
-<br>
+
+
+<h2>Objetivo</h2>
+
 <p>
 El objetivo principal de este curso consiste en introducir al alumno a los fundamentos teóricos y prácticos de las técnicas econométricas básicas. Al final del curso el alumno debiera ser capaz de modelar y estimar relaciones entre distintas variables económicas de interés. Asimismo, el alumno estará en condiciones de interpretar resultados econométricos, criticarlos y proponer soluciones a los problemas clásicos que se enfrenta el investigador al momento de hacer econometría.
 </p>
