@@ -1,9 +1,8 @@
 ---
 title: "Importar datos a R"
-author: "Profesor: Víctor Macías E."
+author: "Víctor Macías E."
 output:
-  pagedown::book_crc:
-    toc: yes
+  tufte::tufte_html: default
 ---
 
 ```{r setup, include=FALSE}
@@ -135,6 +134,20 @@ read_sas | SAS
 # Paquete *"data.table"*:
 
 Este paquete se utiliza para manipulación de datos, pero también para importar datos, especialmente archivos muy grandes. Uno de sus atractivos más importantes es su gran rapidez. Para una descripción detallada, se recomienda ir al siguiente link <https://cran.r-project.org/web/packages/data.table/data.table.pdf>
+
+```{r}
+library(data.table)
+library(DT)
+```
+
+```{r}
+DT = data.table(
+  region = c("A","A","A","B","B","C","C","C","C","D"),
+  var1 = 1:10,
+  var2 = c(17, 214, 24, 25 ,53, 35, 35, 12, 56, 78)
+)
+datatable(DT, width = 600)
+```
 
 
 # Paquete *"WDI"*:

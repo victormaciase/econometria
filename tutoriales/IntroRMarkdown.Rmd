@@ -1,16 +1,15 @@
 ---
 title: "Introducción a R Markdown"
-author: "Profesor: Víctor Macías E."
+author: "Víctor Macías E."
 output:
-  pagedown::book_crc:
-    toc: yes
+  tufte::tufte_html: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-## ¿Qué es R Markdown?
+# ¿Qué es R Markdown?
 
 Un framework para crear documentos y presentaciones, integrando texto, código y resultados. Se pueden crear documentos en html, pdf o word usando código en R.
 
@@ -18,13 +17,13 @@ Además, existen paquetes como `flexdashboard` que permiten extender el uso de R
 
 En estas notas se revisarán dos formatos de documentos (pdf y word) y dos de presentaciones (beamer y power point).
 
-## Ventajas de R Markdown
+# Ventajas de R Markdown
 
 - Facilita la colaboración
 - Permite replicar el trabajo realizado por otras personas
 - Se puede automatizar la generación de informes
 
-## Flujo de un documento
+# Flujo de un documento
 
 ![](FlujoRMarkdown.png)
 
@@ -33,14 +32,14 @@ En resumen,
 `rmarkdown::render() = knitr::knit() + Pandoc (+ LaTeX sólo para PDF output)`
 
 
-## Componentes de un documento en R Markdown
+# Componentes de un documento en R Markdown
 
 A continuación se presenta un ejemplo de un documento en R Markdown donde pueden visualizarse sus componentes:
 
 ![](YAML.png)
 
 
-## YAML 
+# YAML 
 
 YAML significa **Y**et **A**nother **M**arkup **L**anguage.
 
@@ -67,10 +66,10 @@ Cada uno de estos outputs permite un conjunto de opciones, las cuales pueden vis
 
 Además del `output` se puede especificar el nombre del autor del documento o presentación, fecha, tamaño de letra, etc.
 
-## Texto
+# Texto
 
 
-### Formato de texto 
+## Formato de texto 
 
 ```{r eval = FALSE}
 *RMarkdown*  o _RMarkdown_
@@ -93,7 +92,7 @@ El resultado es el siguiente:
 superíndice^2^ y subíndice~2~
 
 
-### Encabezados
+## Encabezados
 
 ```{r eval = FALSE}
 
@@ -111,7 +110,7 @@ El resultado es el siguiente:
 ## Segundo nivel {-}
 ### Tercer nivel {-}
 
-### Listas
+## Listas
 
 ```{r eval = FALSE}
 * Parte 1
@@ -129,7 +128,7 @@ El resultado es el siguiente:
 1. Parte 1
 2. Parte 2
 
-### Links
+## Links
 
 ```{r eval = FALSE}
 [World Development Indicators](http://datatopics.worldbank.org/world-development-indicators/)
@@ -143,7 +142,7 @@ El resultado es el siguiente:
 
 <http://datatopics.worldbank.org/world-development-indicators/>
 
-### Imágenes
+## Imágenes
 
 ```{r eval = FALSE}
 ![RMarkdown from RStudio](RMarkdown.png)
@@ -153,7 +152,7 @@ El resultado es el siguiente:
 
 ![RMarkdown from RStudio](RMarkdown.png)
 
-### Tablas
+## Tablas
 
 ```{r eval=FALSE}
 Encabezado 1  | Encabezado 2
@@ -169,7 +168,7 @@ Encabezado 1  | Encabezado 2
 Contenido     | Contenido   
 Contenido     | Contenido   
 
-### Expresiones matemáticas
+## Expresiones matemáticas
 
 ```{r eval = FALSE}
 $\overline x = \frac{\sum_{i=1}^n x_i}{n}$
@@ -182,13 +181,13 @@ $\overline x = \frac{\sum_{i=1}^n x_i}{n}$
 $$\overline x = \frac{\sum_{i=1}^n x_i}{n}$$
 
 
-### Saltos de página e insertar slide en una presentación
+## Saltos de página e insertar slide en una presentación
 
 Para insertar un salto de página `\newpage`
 
 En el caso de presentaciones una *nueva slide* puede agregarse con `#` o `##`.
 
-### Sangría
+## Sangría
 
 ```{r eval=FALSE}
 | Para insertar sangría
@@ -200,9 +199,9 @@ El resultado es el siguiente:
 | Para insertar sangría
 |    Para insertar sangría
 
-## Código
+# Código
 
-### ¿Cómo insertar código? 
+## ¿Cómo insertar código? 
 
 - Cmd/Ctrl + Alt + I
 - Usar el ícono del botón "Insert" en la barra de herramientas del editor.
@@ -210,7 +209,7 @@ El resultado es el siguiente:
 
 `` `r "\u0060\u0060\u0060{r}   código  \u0060\u0060\u0060"` ``
 
-### Opciones
+## Opciones
 
 Entre las opciones que se disponen para controlar el resultado de correr un código se encuentran:
 
@@ -220,7 +219,7 @@ Por ejemplo, el siguiente código crea un *tibble*, pero no se muestra el códig
 
 ![](echo_FALSE.png)
 
-### Tabla
+## Tabla
 
 Para mostrar el *tibble* creado anteriormente como una tabla:
 
@@ -245,7 +244,7 @@ muestra_total_tb %>% knitr::kable()
 
 Existen distintas opciones para afectar el formato de la tabla, las cuales pueden revisarse escribiendo en la console `?knitr::kable`
 
-### Código inline
+## Código inline
 
 Se puede incorporar código directamente en el texto escribiendo `` `r "\u0060r \u0060"` ``.
 Por ejemplo, si se escribe: *El número de filas del tibble es `` `r "\u0060r nrow(muestra_total_tb)\u0060"` ``*, se obtiene:
@@ -253,7 +252,7 @@ Por ejemplo, si se escribe: *El número de filas del tibble es `` `r "\u0060r nr
 > El número de filas del tibble es `r nrow(muestra_total_tb)`
 
 
-## Recursos para el aprendizaje
+# Recursos para el aprendizaje
 
 En RStudio se puede acceder a Cheatsheets relacionadas a RMarkdown:
 
