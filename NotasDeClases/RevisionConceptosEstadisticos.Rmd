@@ -27,7 +27,10 @@ library(kableExtra)
 library(HistData)
 library(openintro)
 library(DT)
+library(tidyquant)
 ```
+
+
 
 ```{r echo=FALSE}
 data("GaltonFamilies")
@@ -42,8 +45,7 @@ class: middle
 
 - Variables
 - Descripción de datos
-- Tipos de datos
-- Correlación versus causalidad
+- Tipos y fuentes de datos
 - Población y muestra
 - Intervalos de confianza
 - Test de hipótesis
@@ -90,19 +92,23 @@ class: inverse, right, middle
 
 ---
 
+class: middle
+
 # Cólera en Londres (1855)
 
 .center[![description of the image](images/cholera_street.jpg)]
 
-Fuente: <a href="https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg">Click acá</a>
+Ver <https://commons.wikimedia.org/wiki/File:Snow-cholera-map-1.jpg>
 
 ---
+
+class: middle
 
 # La rosa de Nightingale
 
 .center[![description of the image](images/NightingaleMortality.jpg)]
 
-Fuente: https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg
+Ver <https://commons.wikimedia.org/wiki/File:Nightingale-mortality.jpg>
 
 ---
 
@@ -138,14 +144,13 @@ head(loan50_1, 8) %>%
   kbl(format = 'html')
 ```
 
-.footnote[
-https://www.lendingclub.com/
-]
+Se recomienda revisar <https://www.lendingclub.com/> para mayor información.
+
 ---
 
 class: bottom, right
 
-## Siempre es importante conocer el significado de cada variable y su unidad de medición
+## Conocer el significado de cada variable y su unidad de medición es crucial para entender las posibles implicaciones obtenidas del análisis de los datos
 
 ---
 
@@ -270,23 +275,12 @@ class: middle
 
 Cuando se explora la distribución de una variable numérica se examinan:
 
-- La forma de la distribución
-- Medidas de tendencia central
-- Medidas de variación
+- Medidas de localización
+- Medidas de variabilidad
+- Medidas de la forma de la distribución
 
 Varias medidas comúnmente aplicadas a variables numéricas no tiene sentido su uso en variables categóricas, ya que su naturaleza es distinta. 
 
----
-
-class: middle 
-
-# Forma de la distribución
-
-Gráficamente, un histograma o la densidad permiten visualizar la forma de la distribución:
-
-.center[![description of the image](images/asimetria_simetria.jpg)]
-
-La distribución de valores de variables categóricas no se representan visualmente usando un histograma, sino un gráfico de barras. Otra forma que se usa a menudo para mostrar la distribución de una variable categórica es una tabla de frecuencias.
 
 ---
 
@@ -331,16 +325,21 @@ GaltonFamilies %>% ggplot(aes(x = childHeight)) +
 
 ---
 
+class: inverse, center, middle
+
+# Medidas de localización
+
+---
+
 class: middle
 
-# Medidas de tendencia central
-
-Una medida de tendencia central es un valor en medio o en el centro de un conjunto
-de datos.
+A continuación analizaremos las siguientes medidas de localización de un conjunto de datos:  
 
 - Media aritmética
 - Mediana
+- Media geométrica
 - Moda
+- Percentiles
 
 ---
 
@@ -385,6 +384,25 @@ A diferencia de la media aritmética, la mediana no cambia mucho cuando hay poco
 
 class: middle
 
+# Media geométrica
+
+$$\overline x_g=\sqrt[n]{x_1 \times x_2 \times \dots \times x_n}=(x_1 \times x_2 \times \dots \times x_n)^\frac{1}{n}$$
+
+La media geométrica se usa a menudo cuando se analizan tasas de crecimiento.
+
+
+---
+
+class: middle
+
+# Aplicación: Tasa promedio de retorno de un activo
+
+La tasa de retorno de un activo en el período 1 es -20% y en el período 2 es +20% ¿Cuál es la tasa de retorno promedio?
+
+---
+
+class: middle
+
 # Moda
 
 La moda es el o los valores que se repiten con mayor frecuencia.
@@ -395,12 +413,29 @@ Un conjunto de datos puede tener una moda (unimodal), dos modas (bimodal) o múl
 
 class: middle
 
-# Medidas de variación
+# Percentiles
+
+Para un conjunto de $n$ observaciones, el p-ésimo percentil divide los datos en dos partes: aproximadamente $p\%$ de las observaciones son menores que el p-ésimo percentil y el $(100-p)\%$ de las observaciones son más grandes que el p-ésimo percentil. Para el cálculo del p-ésimo percentil, los datos deben ordenarse en orden ascendente.
+
+
+$$L_p=\frac{p}{100}(n+1)$$
+---
+
+class: inverse, center, middle
+
+# Medidas de variabilidad o dispersión
+
+---
+
+class: middle
+
+Para ayudarnos a entender la variabilidad de los datos usaremos las siguientes medidas:
 
 - Rango
 - Rango intercuartil
 - Desviación estándar
 - Varianza
+- Coeficiente de variación
 
 ---
 
@@ -442,7 +477,82 @@ $$\sigma ^2=\frac{\sum_{i=1}^n (x_i-\overline x)^2}{n-1}$$
 
 class: middle
 
-# Los cinco números resumen 
+# Coeficiente de variación
+
+Muestra cuán grande es la desviación estándar en relación a la media.
+
+$$Coeficiente \hspace{0.2cm} de \hspace{0.2cm} variación \hspace{0.2cm} = (\frac{\sigma_x}{\overline x} \times 100)\%$$
+
+El coeficiente de variación es un estadístico útil para comparar la variabilidad de variables que tienen desviaciones estándar y medias distintas.
+
+---
+
+class: inverse, center, middle
+
+# Medidas de la forma de la distribución
+
+---
+
+class: middle
+
+Gráficamente, un histograma o la densidad permiten visualizar la forma de la distribución:
+
+.center[![description of the image](images/asimetria_simetria.jpg)]
+
+- Si la distribución es simétrica, entonces la media aritmética y la mediana son iguales.
+
+- Si la distribución es asimétrica positiva, entonces la media aritmética será mayor que la mediana.
+
+- Si la distribución es asimétrica negativa, entonces la media aritmética será menor que la mediana.
+
+---
+
+class: bottom, right
+
+## La distribución de valores de variables categóricas no se representan visualmente usando un histograma, sino un gráfico de barras. Otra forma que se usa a menudo para mostrar la distribución de una variable categórica es una tabla de frecuencias
+
+
+---
+
+class: middle
+
+A continuación se presentarán las siguientes medidas de la forma de una ditribución:  
+
+- Skewness
+- Curtosis
+
+---
+
+class: middle
+
+# Asimetría (skewness)
+
+Mide la falta de simetría de una distribución. Toma el valor cero, si la distribución es simétrica, un valor mayor a cero si el sesgo es positivo y un valor menor a cero, si el sesgo es negativo. La asimetría no tiene unidades y no varía al cambiar las unidades de medición de la variable aleatoria.
+
+$$skewness=\frac{\frac{\sum_{i=1}^n (x_i - \overline x)^3}{n}}{\left[\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n}\right]^{\frac{3}{2}}}$$
+
+---
+
+class: middle
+
+# Curtosis
+
+Mide el grosor o peso de las colas de la distribución. La curtosis de una variable aleatoria que se distribuye normalmente es 3. La distribución de una variable aleatoria con una curtosis mayor que 3 tiene colas más gruesas que una variable aleatoria normal y se denomina leptocúrtica. En el caso que la curtosis sea menor a 3, la distribución se denomina platicúrtica y si es igual a 3, se llama mesocúrtica. La curtosis  no tiene unidades y no varía al cambiar las unidades de medición de la variable aleatoria.
+
+$$curtosis=\frac{\frac{\sum_{i=1}^n (x_i - \overline x)^4}{n}}{\left[\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n}\right]^2}$$
+
+
+---
+
+class: inverse, center, middle
+
+# Resumen de cinco números 
+
+---
+
+class: middle
+
+A menundo se presentan los siguientes cinco números para resumir los datos: 
 
 - Valor mínimo
 - Primer cuartil o percentil 25
@@ -452,17 +562,6 @@ class: middle
 
 Además, se acostumbra reportar la media aritmética, desviación estándar, número de valores y el número de datos faltantes (missing values).
 
----
-
-class: middle
-
-# Estadísticos robustos
-
-Son aquellos cuyos valores cambian muy poco en la presencia de observaciones extremas. 
-
-La mediana y el rango intercuartil son estadísticos robustos.
-
-La media aritmética y la desviación estándar no son estadísticos robustos, ya que sus valores pueden ser muy influenciados por observaciones extremas.
 
 ---
 
@@ -495,7 +594,7 @@ class: middle
 
 # Outliers
 
-Un <font color="red">outlier</font> es un valor observado que es muy grande o muy pequeño en relación a otros en los datos.
+Un outlier es un valor observado que es muy grande o muy pequeño en relación a otros en los datos.
 
 La definición Tukey de un outlier corresponde a un valor que cae fuera del siguiente intervalo:
 
@@ -526,27 +625,25 @@ GaltonFamilies %>% ggplot(aes(x = gender, y = childHeight)) +
 
 class: middle
 
-# Asimetría (skewness)
+# Estadísticos robustos
 
-Mide la falta de simetría de una distribución. Toma el valor cero, si la distribución es simétrica, un valor mayor a cero si el sesgo es positivo y un valor menor a cero, si el sesgo es negativo. La asimetría no tiene unidades y no varía al cambiar las unidades de medición de la variable aleatoria.
+Son aquellos cuyos valores cambian muy poco en la presencia de observaciones extremas. 
 
-$$skewness=\frac{\frac{\sum_{i=1}^n (x_i - \overline x)^3}{n}}{\left[\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n}\right]^{\frac{3}{2}}}$$
+La mediana y el rango intercuartil son estadísticos robustos.
 
----
+La media aritmética y la desviación estándar no son estadísticos robustos, ya que sus valores pueden ser muy influenciados por observaciones extremas.
 
-class: middle
-
-# Curtosis
-
-Mide el grosor o peso de las colas de la distribución. La curtosis de una variable aleatoria que se distribuye normalmente es 3. La distribución de una variable aleatoria con una curtosis mayor que 3 tiene colas más gruesas que una variable aleatoria normal y se denomina leptocúrtica. En el caso que la curtosis sea menor a 3, la distribución se denomina platicúrtica y si es igual a 3, se llama mesocúrtica. La curtosis  no tiene unidades y no varía al cambiar las unidades de medición de la variable aleatoria.
-
-$$curtosis=\frac{\frac{\sum_{i=1}^n (x_i - \overline x)^4}{n}}{\left[\frac{\sum_{i=1}^n (x_i - \overline x)^2}{n}\right]^2}$$
 
 ---
 
-class: middle
+class: inverse, center, middle
 
 # Relación entre dos variables cuantitativas
+
+---
+
+class: middle
+
 
 - Covarianza
 - Correlación
@@ -685,72 +782,6 @@ La correlación entre las variables $x$ e $y$ en ambos conjuntos de datos es $-0
 
 ---
 
-class: inverse, center, middle
-
-# Tipos de datos
-
----
-
-class: right, bottom
-
-# Entender cómo los datos fueron recolectados es clave para la obtención de conclusiones del análisis de los datos.
-
----
-
-class: middle
-
-## Datos de sección cruzada
-
-Corresponden a datos de varios individuos o entidades (empresas, escuelas, etc.) que se recopilan para un único periodo de tiempo. 
-
-
-## Datos de series temporales
-
-Son datos para un único individuo o entidad (persona, empresa, país) recogidos para múltiples periodos. 
-
-## Datos de panel
-
-También denominados datos longitudinales son datos sobre varios individuos o entidades en los que cada individuo se observa durante dos o más periodos de tiempo.
-
----
-
-class: middle
-
-# Aplicación: World Development Indicators
-
-.center[![description of the image](images/WDI.jpg)]
-
-.footnote[Fuente: <http://datatopics.worldbank.org/world-development-indicators/>]
-
----
-
-class: right, bottom
-
-# Ya sea que los datos correspondan a una sección cruzada, serie de tiempo o un panel, éstos pueden ser experimentales u observacionales, dependiendo si provienen o no de un experimento
-
----
-
-class: middle
-
-# Datos experimentales y observacionales
-
-## Datos experimentales
-
-Estos datos provienen de experimentos diseñados para evaluar un tratamiento o política o investigar un efecto causal.
-
-
-## Datos observacionales
-
-Son datos obtenidos mediante la observación del comportamiento real fuera de un marco experimental. Estos datos corresponden a encuestas, registros administrativos, datos de transacciones en un supermercado, etc.
-
----
-
-class: inverse, center, middle
-
-# Correlación versus causalidad
-
----
-
 class: bottom, right 
 
 # Correlación no implica causalidad
@@ -773,6 +804,96 @@ class: middle
 # Causalidad
 
 Se dice que una acción causa un resultado si el efecto es el resultado directo, o consecuencia, de esta acción. Por lo tanto, el resultado debe ser atribuible a la acción y no a otros factores.
+
+---
+
+class: inverse, center, middle
+
+# Tipos y fuentes de datos
+
+---
+
+class: right, bottom
+
+# Entender cómo los datos fueron recolectados es clave para la obtención de conclusiones del análisis de los datos
+
+---
+
+class: middle
+
+## Datos de sección cruzada o de corte transversal
+
+Corresponden a datos de varios individuos o entidades (empresas, escuelas, etc.) que se recopilan para un único periodo de tiempo. 
+
+
+## Datos de series temporales
+
+Son datos para un único individuo o entidad (persona, empresa, país) recogidos para múltiples periodos. 
+
+---
+
+class: middle
+
+## Combinación de cortes transversales
+
+Combina 2 o más cortes transversales.
+
+## Datos de panel o longitudinales
+
+Son datos sobre varios individuos o entidades en los que cada individuo se observa durante dos o más periodos de tiempo.
+
+---
+
+class: middle
+
+# Aplicación: World Development Indicators
+
+.center[![description of the image](images/WDI.jpg)]
+
+.footnote[Fuente: <http://datatopics.worldbank.org/world-development-indicators/>]
+
+---
+
+class: middle
+
+# Aplicación: Precio del bitcoin
+
+```{r echo = FALSE, fig.width = 6, out.width = "70%", fig.align = "center", fig.asp = 0.618}
+bitcoin <- tq_get("CBBTCUSD", get = "economic.data", from = "2016-01-01", to = "2021-03-03")
+
+bitcoin %>% 
+  ggplot(aes(x = date, y = price)) +
+  geom_line(colour = "#3fa3ab", size = 0.5) +
+  scale_x_date(date_breaks = "1 years", date_labels = "%Y") +
+  labs(
+       caption = paste0("Fuente: Coinbase, obtenido de Federal Reserve Bank of St.
+                        Louis (FRED)", "\n", "https://fred.stlouisfed.org/series/CBBTCUSD"),
+       x = NULL,
+       y = "Precio (US$)") +
+  theme_tq()
+```
+
+
+---
+
+class: right, bottom
+
+# Ya sea que los datos correspondan a una sección cruzada, serie de tiempo o un panel, éstos pueden ser experimentales u observacionales, dependiendo si provienen o no de un experimento
+
+---
+
+class: middle
+
+# Datos experimentales y observacionales
+
+## Datos experimentales
+
+Estos datos provienen de experimentos diseñados para evaluar un tratamiento o política o investigar un efecto causal.
+
+
+## Datos observacionales
+
+Son datos obtenidos mediante la observación del comportamiento real fuera de un marco experimental. Estos datos corresponden a encuestas, registros administrativos, datos de transacciones en un supermercado, etc.
 
 ---
 

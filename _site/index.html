@@ -283,8 +283,17 @@ $(document).ready(function () {
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="NotasClases.html">Notas de Clases</a>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Notas de Clases
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="NotasDeClases/RevisionConceptosEstadisticos.html">Revisión de conceptos estadísticos</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -297,10 +306,16 @@ $(document).ready(function () {
       <a href="tutoriales/installR.html">Instalación de R</a>
     </li>
     <li>
+      <a href="tutoriales/TibblesYMas.html">Tibbles y algo más</a>
+    </li>
+    <li>
       <a href="tutoriales/IntroRMarkdown.html">R Markdown</a>
     </li>
     <li>
       <a href="tutoriales/ImportarR.html">Importar datos a R</a>
+    </li>
+    <li>
+      <a href="tutoriales/Intro_dplyr.html">Introducción a dplyr</a>
     </li>
   </ul>
 </li>
