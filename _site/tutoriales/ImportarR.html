@@ -261,16 +261,6 @@ if (window.hljs) {
 <div id="paquete-data.table" class="section level1">
 <h1>Paquete <em>“data.table”</em>:</h1>
 <p>Este paquete se utiliza para manipulación de datos, pero también para importar datos, especialmente archivos muy grandes. Uno de sus atractivos más importantes es su gran rapidez. Para una descripción detallada, se recomienda ir al siguiente link <a href="https://cran.r-project.org/web/packages/data.table/data.table.pdf" class="uri">https://cran.r-project.org/web/packages/data.table/data.table.pdf</a></p>
-<pre class="r"><code>library(data.table)
-library(DT)</code></pre>
-<pre class="r"><code>DT = data.table(
-  region = c(&quot;A&quot;,&quot;A&quot;,&quot;A&quot;,&quot;B&quot;,&quot;B&quot;,&quot;C&quot;,&quot;C&quot;,&quot;C&quot;,&quot;C&quot;,&quot;D&quot;),
-  var1 = 1:10,
-  var2 = c(17, 214, 24, 25 ,53, 35, 35, 12, 56, 78)
-)
-datatable(DT, width = 600)</code></pre>
-<div id="htmlwidget-8fcd9686d09679fbc9a4" style="width:600px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8fcd9686d09679fbc9a4">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["A","A","A","B","B","C","C","C","C","D"],[1,2,3,4,5,6,7,8,9,10],[17,214,24,25,53,35,35,12,56,78]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>region<\/th>\n      <th>var1<\/th>\n      <th>var2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,3]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="paquete-wdi" class="section level1">
 <h1>Paquete <em>“WDI”</em>:</h1>

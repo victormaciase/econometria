@@ -1,0 +1,114 @@
+---
+fontsize: 12pt
+geometry: margin=1in
+output:
+  pdf_document: default
+  word_document: default
+---
+
+\begin{center}
+      \includegraphics[width=6cm]{logo_ingcomercial.jpg}\\
+    \vspace{0.5cm}
+			\LARGE{\textbf{Econometría I}}\\
+			\LARGE{\textbf{ICO8106}}\\
+\end{center}
+\begin{flushright}
+\large{\textbf{Otoño 2021}}
+\end{flushright}
+\vspace{1cm}
+\textbf{Profesor}: \textit{Víctor Macías E.}  
+\textbf{e-mail}: \textit{victor.macias@mail.udp.cl}
+
+
+# Objetivos generales del curso
+
+El objetivo principal de este curso consiste en introducir al alumno a los fundamentos teóricos y prácticos de las técnicas econométricas básicas. Al final del curso el alumno debiera ser capaz de modelar y estimar relaciones entre distintas variables económicas de interés. Asimismo, el alumno estará en condiciones de interpretar resultados econométricos, criticarlos y proponer soluciones a los problemas clásicos que se enfrenta el investigador al momento de hacer econometría.
+
+
+# Metodología
+
+El curso se desarrollará en bases a clases teóricas y prácticas, complementadas con sesiones semanales de ayudantías. Es de suma importancia que los alumnos asistan a las ayudantías, ya que en ellas se realizarán aplicaciones prácticas de los contenidos teóricos y se desarrollarán aplicaciones en R.
+
+# Evaluación
+
+-	Prueba solemne ($20\%$) común en todas las secciones
+-	Examen ($30\%$), presencial si las condiciones sanitarias lo permiten y común en todas las secciones
+-	Participación ($20\%$)
+-	Tareas y/o controles ($30\%$) requerirán trabajo en R, resolver preguntas teóricas, y preguntas de lecturas de los textos del curso.
+
+La nota de tareas y controles solamente se considerará en la evaluación final si la nota de desempeño individual (NDI), calculada como el promedio ponderado de Solemne (S), Examen (E)  y Participación (P) superan un 4,0; es decir, si 
+
+$$NDI=\frac{0.2 \times S + 0.3 \times E + 0.2 \times P}{0.7}>4.0$$
+En caso contrario, se reprobará el curso con nota igual al $NDI$.
+
+# Bibliografía
+
+(1) Wooldridge, J. (2009) Introducción a la Econometría: Un Enfoque Moderno. Cuarta
+edición. Thompson. **[W]**
+\vspace{0.2cm}
+\newline
+(2) Stock, J. y M. Watson. (2012). Introducción a la econometría. Tercera edición.
+Pearson. **[SW]**
+\vspace{0.2cm}
+\newline
+(3) Hanck, C., Arnold, M., Gerber, A. and M. Schmelzer. (2018). Introduction to
+Econometrics with R. Open Review. **[HAGS]**
+
+
+
+# Contenido
+
+
+1. El modelo clásico de regresión lineal simple
+
+- **W** Capítulos 1, 2
+- **HAGS** Capítulo 4
+- **SW** Capítulo 4
+
+2. El modelo clásico de regresión lineal multiple.
+
+- **W** Capítulos 3 y 4
+- **HAGS** Capítulos 5, 6 y 7
+- **SW** Capítulos 5, 6 y 7
+
+3. Formas funcionales, predicción, información cualitativa
+
+- **W** Capítulos 6 y 7
+- **HAGS** Capítulo 8
+- **SW** Capítulo 8
+
+4. MCO Asintóticos y Experimentos de Montecarlo
+
+- **W** Capítulo 5
+
+5. Heterocedasticidad y MCG
+
+- **W** Capítulo 8
+- **SW** Capítulo 5
+
+6. Endogeneidad y variables instrumentales
+
+- **W** Capítulo 15
+- **HAGS** Capítulos 9 y 12
+- **SW** Capítulos 9 y 12
+
+7. Modelos de Variable Dependiente Binaria
+
+- **W** Capítulo 17
+- **HAGS** Capítulo 11
+- **SW** Capítulo 11
+
+# Condiciones del curso
+
+
+-  Dados los requisitos del curso, se asume que el alumno tiene un dominio acabado en las
+áreas de álgebra lineal, probabilidad y estadística. Se sugiere repasar:
+
+      – **W** Anexos A, B, C y D
+      
+      – **SW** Capítulos 2 y 3
+      
+      – **HAGS** Capítulos 1, 2 y 3
+
+- El procedimiento de reclamo para las pruebas es fijado por la Escuela de Ingeniería
+Comercial.

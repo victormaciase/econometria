@@ -135,12 +135,12 @@ read_sas | SAS
 
 Este paquete se utiliza para manipulación de datos, pero también para importar datos, especialmente archivos muy grandes. Uno de sus atractivos más importantes es su gran rapidez. Para una descripción detallada, se recomienda ir al siguiente link <https://cran.r-project.org/web/packages/data.table/data.table.pdf>
 
-```{r}
+```{r include = FALSE}
 library(data.table)
 library(DT)
 ```
 
-```{r}
+```{r include = FALSE}
 DT = data.table(
   region = c("A","A","A","B","B","C","C","C","C","D"),
   var1 = 1:10,
